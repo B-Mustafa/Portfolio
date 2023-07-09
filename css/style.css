@@ -838,23 +838,23 @@ textarea.form-control{
 }
 }
 
-.repo-card {
+.Box-row {
             padding: 16px;
             margin-bottom: 16px;
             border: 1px solid #e1e4e8;
             border-radius: 6px;
         }
 
-        .repo-card h3 {
+        .Box-row h3 {
             margin: 0;
             font-size: 20px;
         }
 
-        .repo-card p {
+        .Box-row p {
             margin-top: 8px;
             margin-bottom: 0;
         }
 
-        .repo-card a {
+        .Box-row a {
             color: #0366d6;
         }
