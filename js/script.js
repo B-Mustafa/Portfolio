@@ -107,28 +107,43 @@ const sidebarToggle = document.querySelector(".sidebar-toggle")
 
 /* portfolio fetch */
 
-async function fetchRepositories() {
+ async function fetchRepositories() {
             try {
-                const response = await fetch('https://api.github.com/users/B-Mustafa/repos');
+                const response = await fetch('https://api.github.com/users/your-username/repos');
                 const repositories = await response.json();
-                
+
                 displayRepositories(repositories);
             } catch (error) {
                 console.log('Error fetching repositories:', error);
             }
         }
 
-        // Function to display repositories on the web page
+        // Function to display repositories using cards on the web page
         function displayRepositories(repositories) {
             const repositoriesDiv = document.getElementById('repositories');
 
             repositories.forEach(repo => {
-                const repoLink = document.createElement('a');
-                repoLink.href = repo.html_url;
-                repoLink.textContent = repo.name;
-                
-                repositoriesDiv.appendChild(repoLink);
-                repositoriesDiv.appendChild(document.createElement('br'));
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const name = document.createElement('h3');
+                name.textContent = repo.name;
+
+                const description = document.createElement('p');
+                description.textContent = repo.description || 'No description provided.';
+
+                const language = document.createElement('p');
+                language.textContent = `Language: ${repo.language || 'Not specified.'}`;
+
+                const link = document.createElement('a');
+                link.href = repo.html_url;
+                link.textContent = 'Go to repository';
+
+                card.appendChild(name);
+                card.appendChild(description);
+                card.appendChild(language);
+                card.appendChild(link);
+                repositoriesDiv.appendChild(card);
             });
         }
 
