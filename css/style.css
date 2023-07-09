@@ -837,3 +837,18 @@ textarea.form-control{
     padding-left: 12px;
 }
 }
+
+.card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card p {
+            margin-bottom: 0;
+        }
