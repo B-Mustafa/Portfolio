@@ -906,3 +906,9 @@ textarea.form-control{
       color: #054ab0;
     }
 
+section .footer{
+    display:flex;
+    justify-content:center;
+    color:var(--text-black-900)
+}
+
