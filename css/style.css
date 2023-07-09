@@ -675,22 +675,6 @@ line-height: 25px;
 }
 
 /*Contact Section*/
-.contact-title{
-    color: var(--skin-color);
-    justify-content: center;
-    text-align: center;
-    font-size: 25px;
-    margin-bottom: 20px;
-    
-}
-
-.contact-sub-title{
-    color: var(--text-black-900);
-    justify-content: center;
-    text-align: center;
-    font-size: 15px;
-    margin-bottom: 60px;
-}
 
 .contact-info-item{
     flex: 0 0 25%;
@@ -780,7 +764,6 @@ textarea.form-control{
     transition: all 0.3s ease;
     
 }
-
 
 @media (max-width:1199px) {
 
