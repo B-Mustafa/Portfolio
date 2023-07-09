@@ -910,6 +910,6 @@ footer{
     color:var(--text-black-900);
     position:absolute;
     bottom:10px;
-    left:30px;
+    left:50%;
 }
 
