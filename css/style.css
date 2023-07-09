@@ -838,23 +838,23 @@ textarea.form-control{
 }
 }
 
-.Box-row {
+.Box {
             padding: 16px;
             margin-bottom: 16px;
             border: 1px solid #e1e4e8;
             border-radius: 6px;
         }
 
-        .Box-row h3 {
+        .Box-title {
             margin: 0;
             font-size: 20px;
         }
 
-        .Box-row p {
+        .Box-description {
             margin-top: 8px;
             margin-bottom: 0;
         }
 
-        .Box-row a {
+        .Link--primary {
             color: #0366d6;
         }
