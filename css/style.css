@@ -910,5 +910,6 @@ footer{
     z-index: 99;
     position: absolute;
     bottom: 0;
+    right:50%;
 }
 
