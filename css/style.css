@@ -889,13 +889,13 @@ textarea.form-control{
       margin-right: 4px;
     }
 
-    .repository-card .link {
+    .repository-card a {
       color: #0366d6;
       text-decoration: none;
       font-size: 14px;
       transition: color 0.3s ease-in-out;
     }
 
-    .repository-card .link:hover {
+    .repository-card a:hover {
       color: #054ab0;
     }
