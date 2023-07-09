@@ -108,43 +108,40 @@ const sidebarToggle = document.querySelector(".sidebar-toggle")
 /* portfolio fetch */
 
 async function fetchRepositories() {
-            try {
-                const response = await fetch('https://api.github.com/users/B-Mustafa/repos');
-                const repositories = await response.json();
+      try {
+        const response = await fetch('https://api.github.com/users/B-Mustafa/repos');
+        const repositories = await response.json();
 
-                displayRepositories(repositories);
-            } catch (error) {
-                console.log('Error fetching repositories:', error);
-            }
-        }
+        displayRepositories(repositories);
+      } catch (error) {
+        console.log('Error fetching repositories:', error);
+      }
+    }
 
-        // Function to display repositories using cards on the web page
-        function displayRepositories(repositories) {
-            const repositoriesDiv = document.getElementById('repositories');
+    // Function to display repositories using cards on the web page
+    function displayRepositories(repositories) {
+      const repositoriesDiv = document.getElementById('repositories');
 
-            repositories.forEach(repo => {
-                const card = document.createElement('div');
-                card.className = 'Box';
+      repositories.forEach(repo => {
+        const card = document.createElement('div');
+        card.className = 'repository-card';
 
-                const name = document.createElement('h3');
-                name.className = 'Box-title';
-                name.textContent = repo.name;
+        const name = document.createElement('h3');
+        name.textContent = repo.name;
 
-                const description = document.createElement('p');
-                description.className = 'Box-description';
-                description.textContent = repo.description || 'No description provided.';
+        const description = document.createElement('p');
+        description.textContent = repo.description || 'No description provided.';
 
-                const link = document.createElement('a');
-                link.href = repo.html_url;
-                link.className = 'Link--primary';
-                link.textContent = 'Go to repository';
+        const link = document.createElement('a');
+        link.href = repo.html_url;
+        link.textContent = 'Go to repository';
 
-                card.appendChild(name);
-                card.appendChild(description);
-                card.appendChild(link);
-                repositoriesDiv.appendChild(card);
-            });
-        }
+        card.appendChild(name);
+        card.appendChild(description);
+        card.appendChild(link);
+        repositoriesDiv.appendChild(card);
+      });
+    }
 
-        // Fetch repositories on page load
-        fetchRepositories();
+    // Fetch repositories on page load
+    fetchRepositories();
