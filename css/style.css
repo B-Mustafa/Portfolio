@@ -838,36 +838,64 @@ textarea.form-control{
 }
 }
 
- .repository-card {
-      background-color: #f6f8fa;
+.repository-card {
+      background-color: #fff;
       border: 1px solid #e1e4e8;
       border-radius: 6px;
       padding: 16px;
       margin-bottom: 16px;
-      display: flex;
-      flex-direction: column;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .repository-card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .repository-card h3 {
       margin: 0 0 8px 0;
       font-size: 20px;
+      font-weight: 600;
     }
 
     .repository-card p {
-      margin: 0;
+      margin: 0 0 16px 0;
+      color: #586069;
+      line-height: 1.5;
     }
 
     .repository-card .details {
-      margin-top: 8px;
       display: flex;
       align-items: center;
+      margin-bottom: 16px;
     }
 
     .repository-card .details span {
-      margin-right: 8px;
+      margin-right: 16px;
+      font-size: 14px;
+      color: #586069;
     }
 
-    .repository-card a {
+    .repository-card .language {
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+    }
+
+    .repository-card .language-color {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 4px;
+    }
+
+    .repository-card .link {
       color: #0366d6;
       text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .repository-card .link:hover {
+      color: #054ab0;
     }
