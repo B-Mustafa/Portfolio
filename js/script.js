@@ -132,12 +132,29 @@ async function fetchRepositories() {
         const description = document.createElement('p');
         description.textContent = repo.description || 'No description provided.';
 
+        const details = document.createElement('div');
+        details.className = 'details';
+
+        const language = document.createElement('span');
+        language.textContent = repo.language;
+
+        const stars = document.createElement('span');
+        stars.textContent = `Stars: ${repo.stargazers_count}`;
+
+        const forks = document.createElement('span');
+        forks.textContent = `Forks: ${repo.forks_count}`;
+
         const link = document.createElement('a');
         link.href = repo.html_url;
         link.textContent = 'Go to repository';
 
+        details.appendChild(language);
+        details.appendChild(stars);
+        details.appendChild(forks);
+
         card.appendChild(name);
         card.appendChild(description);
+        card.appendChild(details);
         card.appendChild(link);
         repositoriesDiv.appendChild(card);
       });
