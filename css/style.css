@@ -838,23 +838,26 @@ textarea.form-control{
 }
 }
 
-.Box {
-            padding: 16px;
-            margin-bottom: 16px;
-            border: 1px solid #e1e4e8;
-            border-radius: 6px;
-        }
+.repository-card {
+      background-color: #f6f8fa;
+      border: 1px solid #e1e4e8;
+      border-radius: 6px;
+      padding: 16px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .Box-title {
-            margin: 0;
-            font-size: 20px;
-        }
+    .repository-card h3 {
+      margin: 0 0 8px 0;
+      font-size: 20px;
+    }
 
-        .Box-description {
-            margin-top: 8px;
-            margin-bottom: 0;
-        }
+    .repository-card p {
+      margin: 0;
+    }
 
-        .Link--primary {
-            color: #0366d6;
-        }
+    .repository-card a {
+      color: #0366d6;
+      text-decoration: none;
+    }
