@@ -104,3 +104,33 @@ const sidebarToggle = document.querySelector(".sidebar-toggle")
         })
         .catch((err) => console.log(err));
         }
+
+/* portfolio fetch */
+
+async function fetchRepositories() {
+            try {
+                const response = await fetch('https://api.github.com/users/B-Mustafa/repos');
+                const repositories = await response.json();
+                
+                displayRepositories(repositories);
+            } catch (error) {
+                console.log('Error fetching repositories:', error);
+            }
+        }
+
+        // Function to display repositories on the web page
+        function displayRepositories(repositories) {
+            const repositoriesDiv = document.getElementById('repositories');
+
+            repositories.forEach(repo => {
+                const repoLink = document.createElement('a');
+                repoLink.href = repo.html_url;
+                repoLink.textContent = repo.name;
+                
+                repositoriesDiv.appendChild(repoLink);
+                repositoriesDiv.appendChild(document.createElement('br'));
+            });
+        }
+
+        // Fetch repositories on page load
+        fetchRepositories();
