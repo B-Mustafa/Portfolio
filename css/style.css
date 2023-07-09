@@ -906,13 +906,9 @@ textarea.form-control{
       color: #054ab0;
     }
 
-.footer{
-    display:flex;
-    justify-content:center;
-    color:var(--text-black-900)
-    z-index:99;
-    position:abosolute;
-    bottom:0;
-    right:50%;
+footer{
+    z-index: 99;
+    position: absolute;
+    bottom: 0;
 }
 
