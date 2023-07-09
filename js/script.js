@@ -126,23 +126,31 @@ const sidebarToggle = document.querySelector(".sidebar-toggle")
                 const card = document.createElement('div');
                 card.className = 'card';
 
-                const name = document.createElement('h3');
+                const cardBody = document.createElement('div');
+                cardBody.className = 'card-body';
+
+                const name = document.createElement('h5');
+                name.className = 'card-title';
                 name.textContent = repo.name;
 
                 const description = document.createElement('p');
+                description.className = 'card-text';
                 description.textContent = repo.description || 'No description provided.';
 
                 const language = document.createElement('p');
+                language.className = 'card-text';
                 language.textContent = `Language: ${repo.language || 'Not specified.'}`;
 
                 const link = document.createElement('a');
                 link.href = repo.html_url;
+                link.className = 'btn btn-primary';
                 link.textContent = 'Go to repository';
 
-                card.appendChild(name);
-                card.appendChild(description);
-                card.appendChild(language);
-                card.appendChild(link);
+                cardBody.appendChild(name);
+                cardBody.appendChild(description);
+                cardBody.appendChild(language);
+                cardBody.appendChild(link);
+                card.appendChild(cardBody);
                 repositoriesDiv.appendChild(card);
             });
         }
