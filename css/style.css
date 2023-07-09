@@ -899,3 +899,27 @@ textarea.form-control{
     .repository-card a:hover {
       color: #054ab0;
     }
+
+.card {
+      background-color: #222;
+      color: #fff;
+    }
+
+    .card-title {
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .card-text {
+      color: #ccc;
+    }
+
+    .card-link {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    .card-link:hover {
+      color: #054ab0;
+    }
