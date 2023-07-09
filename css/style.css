@@ -912,25 +912,25 @@ footer{
     bottom:10px;
     left:35%;
 }
-footer .abt-footer{
+ .abt-footer{
     color:var(--text-black-900);
     position:absolute;
     bottom:-220px;
     left:35%;
 }
-footer .svc-footer{
+ .svc-footer{
     color:var(--text-black-900);
     position:absolute;
     bottom:-680px;
     left:35%;
 }
-footer .ctc-footer{
+ .ctc-footer{
     color:var(--text-black-900);
     position:absolute;
     bottom:-300px;
     left:35%;
 }
-footer .repo-footer{
+ .repo-footer{
     color:var(--text-black-900);
     position:absolute;
     bottom:-300px;
