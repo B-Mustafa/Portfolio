@@ -107,7 +107,7 @@ const sidebarToggle = document.querySelector(".sidebar-toggle")
 
 /* portfolio fetch */
 
- async function fetchRepositories() {
+async function fetchRepositories() {
             try {
                 const response = await fetch('https://api.github.com/users/B-Mustafa/repos');
                 const repositories = await response.json();
@@ -124,33 +124,21 @@ const sidebarToggle = document.querySelector(".sidebar-toggle")
 
             repositories.forEach(repo => {
                 const card = document.createElement('div');
-                card.className = 'card';
+                card.className = 'repo-card';
 
-                const cardBody = document.createElement('div');
-                cardBody.className = 'card-body';
-
-                const name = document.createElement('h5');
-                name.className = 'card-title';
+                const name = document.createElement('h3');
                 name.textContent = repo.name;
 
                 const description = document.createElement('p');
-                description.className = 'card-text';
                 description.textContent = repo.description || 'No description provided.';
-
-                const language = document.createElement('p');
-                language.className = 'card-text';
-                language.textContent = `Language: ${repo.language || 'Not specified.'}`;
 
                 const link = document.createElement('a');
                 link.href = repo.html_url;
-                link.className = 'btn btn-primary';
                 link.textContent = 'Go to repository';
 
-                cardBody.appendChild(name);
-                cardBody.appendChild(description);
-                cardBody.appendChild(language);
-                cardBody.appendChild(link);
-                card.appendChild(cardBody);
+                card.appendChild(name);
+                card.appendChild(description);
+                card.appendChild(link);
                 repositoriesDiv.appendChild(card);
             });
         }
