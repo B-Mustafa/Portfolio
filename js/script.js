@@ -162,3 +162,54 @@ async function fetchRepositories() {
 
     // Fetch repositories on page load
     fetchRepositories();
+
+//Style switch
+
+const StyleSwitchToggle = document.querySelector(".toggler");
+
+StyleSwitchToggle.addEventListener("click" ,()  => {
+    document.querySelector(".style-switcher").classList.toggle("open");
+})
+
+window.addEventListener("scroll",() =>{
+    if(document.querySelector(".style-switcher").classList.toggle("open"))
+    {
+        document.querySelector("style-switcher").classList.remove("open");
+    }
+})
+
+const altStyle = document.querySelectorAll(".alt-style");
+function setActiveStyle(color)
+{
+    altStyle.forEach((style) => {
+        if(color === style.getAttribute("title"))
+        {
+            style.removeAttribute("disabled");
+        }
+        else{
+            style.setAttribute("disabled","true") ;
+        }
+    })
+}
+
+//dark light theme
+
+const darkLight = document.querySelector(".dark-light");
+
+
+darkLight.addEventListener("click",()=>{
+    darkLight.querySelector("i").classList.toggle("fa-sun");
+    darkLight.querySelector("i").classList.toggle("fa-moon");
+    document.body.classList.toggle("dark");
+})
+
+window.addEventListener("load",() =>{
+    if(document.body.classList.contains("dark"))
+    {
+        darkLight.querySelector("i").classList.add("fa-sun");
+    }
+    else
+    {
+        darkLight.querySelector("i").classList.add("fa-moon");
+    }
+})
