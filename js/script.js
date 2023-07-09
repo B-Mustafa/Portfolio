@@ -124,7 +124,7 @@ async function fetchRepositories() {
 
             repositories.forEach(repo => {
                 const card = document.createElement('div');
-                card.className = 'repo-card';
+                card.className = 'Box-row';
 
                 const name = document.createElement('h3');
                 name.textContent = repo.name;
