@@ -909,8 +909,7 @@ textarea.form-control{
 footer{
     color:var(--text-black-900);
     position:absolute;
-    bottom:10px;
-    left:35%;
+    bottom:6px;
 }
 
 
