@@ -857,6 +857,16 @@ textarea.form-control{
       margin: 0;
     }
 
+    .repository-card .details {
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+    }
+
+    .repository-card .details span {
+      margin-right: 8px;
+    }
+
     .repository-card a {
       color: #0366d6;
       text-decoration: none;
