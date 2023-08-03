@@ -93,7 +93,8 @@ body.dark{
     margin-top: 40px;
     font-size: 20px;
     font-weight: 500;
-    padding:15px 35px;
+    padding:12px 35px;
+    margin-left: 10px;
     color: white;
     background:var(--skin-color);
     border: none ;
