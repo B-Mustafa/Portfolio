@@ -489,6 +489,7 @@ h3.profession{
     font-weight: 400;
     line-height: 40px;
 }
+.education .title ,
 .experience .title{
     color: var(--skin-color);
 }
