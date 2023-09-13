@@ -498,7 +498,7 @@ h3.profession{
     font-size: 24px;
     margin-bottom: 30px;
     font-weight: 700;
-    color: var(--text-black-900);
+    color: var(--skin-color);
 }
 .timeline-box{
     flex: 0 0 100%;
