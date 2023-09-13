@@ -489,6 +489,9 @@ h3.profession{
     font-weight: 400;
     line-height: 40px;
 }
+.experience .title h3{
+    color: var(--skin-color);
+}
 .education,.experience{
     flex: 0 0 50%;
     max-width: 50%;
@@ -498,7 +501,7 @@ h3.profession{
     font-size: 24px;
     margin-bottom: 30px;
     font-weight: 700;
-    color: var(--skin-color);
+    color: var(--text-black-900);
 }
 .timeline-box{
     flex: 0 0 100%;
