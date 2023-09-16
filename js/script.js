@@ -96,17 +96,6 @@ function sendMail() {
     .catch((err) => console.log(err));
 }
 
-function check(e) {
- // the 2 lines below will stop the default form submit action
-  e.preventDefault()
-  let name = document.getElementById("name").value;
-  if (!name) {
-    alert("Please fill in all fields");
-    return;
-  }else {
-    sendMail();
-  }
-}
 
 
 /* portfolio fetch */
