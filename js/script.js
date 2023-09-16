@@ -96,6 +96,20 @@ function sendMail() {
     .catch((err) => console.log(err));
 }
 
+function check(e) {
+ // the 2 lines below will stop the default form submit action
+  e.preventDefault();
+  e.stopPropagation();
+  var date = document.getElementById("date").value;
+  if (!date) {
+    alert("Please fill in all fields");
+    return;
+  }else {
+    sendMail();
+  }
+}
+
+
 /* portfolio fetch */
 
 async function fetchRepositories() {
