@@ -96,7 +96,7 @@ function sendMail() {
     .catch((err) => console.log(err));
 }
 
-function check() {
+function check(e) {
  // the 2 lines below will stop the default form submit action
   e.preventDefault()
   let name = document.getElementById("name").value;
