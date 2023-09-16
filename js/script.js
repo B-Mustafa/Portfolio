@@ -96,12 +96,10 @@ function sendMail() {
     .catch((err) => console.log(err));
 }
 
-function check(e) {
+function check() {
  // the 2 lines below will stop the default form submit action
-  e.preventDefault();
-  e.stopPropagation();
-  var name = document.getElementById("name").value;
-  if (!name) {
+  let name = document.getElementById("name").value;
+  if (name.value == "") {
     alert("Please fill in all fields");
     return;
   }else {
