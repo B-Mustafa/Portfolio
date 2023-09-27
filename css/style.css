@@ -898,7 +898,7 @@ textarea {
 }
 
 footer {
-  color: var(--text-black-900);
+  color: var(--skin-color);
   position: absolute;
   bottom: 6px;
 }
